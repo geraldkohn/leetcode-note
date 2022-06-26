@@ -21,6 +21,20 @@ type ListNode struct {
 	Next *ListNode
 }
 
-// func removeElements(head *ListNode, val int) *ListNode {
-
-// }
+func removeElements(head *ListNode, val int) *ListNode {
+	//添加虚拟头节点
+	preHead := &ListNode{
+		Val:  -1,
+		Next: nil,
+	}
+	preHead.Next = head
+	node := preHead
+	for node.Next != nil && node != nil {
+		if node.Next.Val == val {
+			node.Next = node.Next.Next //remove
+		} else {
+			node = node.Next //skip
+		}
+	}
+	return preHead.Next
+}
