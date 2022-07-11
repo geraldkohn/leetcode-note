@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 /**
 给你一个字符串 s ，颠倒字符串中 单词 的顺序。
 
@@ -103,8 +99,8 @@ func sub3Reverse(b []byte) []byte {
 	return b
 }
 
-func main() {
-	s := []byte("    hello world    hi ")
-	str := reverseWords(string(s))
-	fmt.Println(str + "->end")
-}
+// func main() {
+// 	s := []byte("    hello world    hi ")
+// 	str := reverseWords(string(s))
+// 	fmt.Println(str + "->end")
+// }
